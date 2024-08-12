@@ -22,7 +22,15 @@ const db = new pg.Client({
 db.connect();
 
 
-
+const createTable = async() =>{
+    try{
+        const result = await db.query("create table if not exist blogs(id serial primary key, title text, content text, author text, image text, date text)");
+        console.log("Table created");
+    }catch(err){
+        console.error("Error creating table", err.stack);
+    }
+}
+createTable();
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, "imageUploads");
