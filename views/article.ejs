@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= article.title  %></title>
+    <link rel="stylesheet" href="/blogStyle.css">
+</head>
+<body>
+    <div class="nav">
+        <nav class="navbar">
+            <h1>Naturá</h1>
+            <div>
+                <p><a href="/">Home</a></p>
+                <p><a href="/blog">Blog</a></p>
+                <p><a href="/newBlog">Create Blog</a></p>
+                <p><a href="/contact">Contact Us</a></p>
+            </div>
+        </nav>
+    
+        <h1 class="heroText">Blog</h1>
+    
+    </div>
+    
+
+    <section>
+        <div class="content">
+            <h1><%= article.title %></h1>
+            <img src="/<%= article.image %>" alt="<%= article.title  %>" height="600" width="810">
+            <h3><%= article.author %></h3>
+            <P><i><%= article.date %></i></P>
+            <hr>
+            <div>
+                <%= article.content %>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

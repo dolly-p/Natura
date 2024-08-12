@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/blogStyle.css">
+</head>
+<body>
+    <div class="nav">
+        <nav class="navbar">
+            <h1>Naturá</h1>
+            <div>
+                <p><a href="/">Home</a></p>
+                <p><a href="/blog">Blog</a></p>
+                <p><a href="/newBlog">Create Blog</a></p>
+                <p><a href="/contact">Contact Us</a></p>
+            </div>
+        </nav>
+    
+        <h1 class="heroText">Blog</h1>
+    
+    </div>
+    
+    <section class="blog">
+        <div>
+             <h1>Published Articles</h1>
+         </div>
+         <div class="blog-items">
+             <% if (!article || article.length === 0) { %>
+                 <h1>No articles to display</h1>
+             <% } else { %>
+                 <% for (let index = 0; index < article.length; index++) { %>
+                     <% if (article[index]) { %>
+                         <div class="blogpost-section">
+                             <div>
+                                 <img src="/<%= article[index].image %>" alt="Blog Image" height="500" width="500">
+                             </div>
+                             <div>
+                                 <p><i><%= new Date(article[index].date).toLocaleDateString() %></i></p>
+                                 
+                                 <h2><%= article[index].title %></h2>
+                                 <p>Author: <%= article[index].author %></p>
+                                 <p><%= article[index].content.substring(0, 100) %>...</p>
+                                 <a href="/blog/<%= article[index].id  %>">Read More</a>
+                             </div>
+                             
+                         </div>
+                     <% } %>
+                 <% } %>
+             <% } %>
+         </div>
+     </section>
+
+    <a href="/">Back to home page</a>
+</body>
+</html>

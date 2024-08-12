@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.hero{
+    background: url(island-1844962.jpg), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    height: 100vh;
+    padding: 1.5rem 0 0 3rem;
+    background-blend-mode: overlay;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: yellow;
+}
+nav h1{
+    font-size: 2rem;
+}
+nav div{
+    display: flex;
+}
+nav div p{
+    padding-right: 3rem;
+}
+nav div p a{
+    color: yellow;
+    text-decoration: none;
+}
+.heroText{
+    margin: 10% 30% 30% 30%;
+    color: yellow;
+}
+.heroText h1{
+    font-size: 6.5rem;
+    letter-spacing: 8px;
+}
+.heroText h3{
+    padding-left: 20%;
+    margin-top: -20px;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+.heroText p{
+    margin-top: 1rem;
+    padding-left: 5%;
+    font-size: 1.5rem;
+}
+#one{
+    color: rgb(255, 30, 0);
+    font-weight: bolder;
+}
+.blog{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.blog h1{
+    text-align: center;
+    margin: 3rem 0 3rem 0;
+}
+.blogpost-section{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.blogpost-section img{
+    border-radius: 5px;
+}

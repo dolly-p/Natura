@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Blog - Naturá</title>
+    <link rel="stylesheet" href="/blogStyle.css">
+</head>
+<body>
+    <div class="nav">
+        <nav class="navbar">
+            <h1>Naturá</h1>
+            <div>
+                <p><a href="/">Home</a></p>
+                <p><a href="/blog">Blog</a></p>
+                <p><a href="/newBlog">Create Blog</a></p>
+                <p><a href="/contact">Contact Us</a></p>
+            </div>
+        </nav>
+    
+        <h1 class="heroText">New blog</h1>
+    
+    </div>
+    <section class="content">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload">upload Image</label>
+            <input type="file" id="file-upload" name="articleImage" accept="images/*">
+            <span id="file-name">No file chosen</span>
+            
+        
+            <input type="text" name="author" required placeholder="Author" class="authorDetail">
+    
+    
+            <input type="text" name="title" required placeholder="title" class="authorDetail"> 
+    
+
+            <textarea name="content" id="postBox" placeholder="Enter your post here..."></textarea>
+    
+    
+    
+            <input type="submit" value="Make Post" id="submit">
+    
+        </form>
+    
+        <a href="/">Back to home</a>
+    </section>
+    
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function() {
+            var fileName = this.files[0].name;
+            document.getElementById('file-name').textContent = 'File Selected: ' + fileName;
+        });
+    </script>
+   
+</body>
+</html>
