@@ -11,13 +11,13 @@ app.use(express.static('public'));
 app.use(express.static("imageUploads"))
 app.use(bodyParser.urlencoded({extended: true}));
 
+
 const db = new pg.Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'postgres',
-    password: 'postgresql',
-    port: 5432
-})
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
+  });
 
 db.connect();
 
