@@ -24,7 +24,7 @@ db.connect();
 
 const createTable = async() =>{
     try{
-        const result = await db.query("create table if not exist blogs(id serial primary key, title text, content text, author text, image text, date text)");
+        const result = await db.query("create table if not exists blogs(id serial primary key, title text, content text, author text, image text, date text)");
         console.log("Table created");
     }catch(err){
         console.error("Error creating table", err.stack);
