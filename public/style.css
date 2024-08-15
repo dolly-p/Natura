@@ -72,8 +72,22 @@ nav div p a{
 .blogpost-section img{
     border-radius: 5px;
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a479506cb4340cb6d2abe95873bd0bc683753f3a
+.view-more{
+    display: block;
+    padding: 1rem 2rem 1rem 2rem;
+    border: 1px solid black;
+    width: 15%;
+    text-align: center;
+    margin: 3rem auto;
+    color: black;
+    text-decoration: none;
+}
+.view-more:hover{
+    background-color: yellow;
+}
+footer{
+    text-align: center;
+    padding: 2rem 0 4rem 0rem;
+    background-color: rgb(201, 201, 8);
+    font-size: 2rem;
+}
